@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white
+}
+
+/*HEADER*/
+
+header {
+    height: 124px;
+    width:100%;
+    background-color : black;
+}
+
+
+header nav {
+    padding: 40px 5% 0 5%;
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: center;
+    
+    
+}
+header nav h1 {
+    font-size: 40px;
+    margin: 0;
+    text-transform: uppercase; 
+    color: orange;
+    cursor:pointer
+}
+header nav .onglets {
+    font-size: 22px;
+    display:flex;
+    align-items: center;
+    padding: 0 0 0 22%;
+}
+header nav .onglets p {
+    margin: 0 30px 0 0;
+    color: #ccc
+}
+header nav .onglets p:hover { 
+    color: #936F39;
+    cursor: pointer;
+    background-color: white;
+}
+
+header nav form {
+    padding: 0 0 0 29%;
+}
+header nav .onglets input{
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 9px 19px;
+    font-size: 16px;
+    padding: 10px;
+    background : linear-gradient(to right, #252525, #202020, black );
+    color:#ccc;
+    border-radius: 20px;
+    border:none;
+    outline:none;
+    cursor:text;
+}
+
+/*LIGNE DE SEPARATION*/
+.ligne{
+    height: 1px;
+    width:100%;
+    margin:26px 0 0 0;
+    background-color: #936F39;
+}
+.ligne2{
+    height: 1px;
+    width:100%;
+    
+    background-color: #936F39;
+}
+
+/*TOP PAGE VIDEO*/
+section.top-page{
+    position: relative;
+    height: 110vh;
+    width:100%;
+    overflow: hidden;
+
+}
+
+video{
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    z-index: -99;
+    transform: translate(-50%,-50%);
+
+}
+
+section.top-page::before{
+    position: absolute;
+    content:"";
+    height:100%;
+    width:100%;
+    background-color: #020202c9;
+}
+
+
+
+/*MAIN*/
+/*PREMIERE PARTIE*/
+
+.image{
+    display: flex;
+    padding: 0 70px 0 0 ;
+}
+
+.presentation {
+
+    background-color: #101010;
+    padding: 30px 5%;
+    margin-top: 35px 5%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+
+.presentation .product-presentation{
+    width: 100%;
+    flex-shrink: 3;
+}
+
+.presentation .product-presentation h1{
+    margin: 0;
+    font-size: 71px;
+    width: 90%;
+    color:#936F39
+}
+.presentation .product-presentation p{
+    font-weight: 300;
+    font-size: 18px;
+    color: #e9e9e9;
+    width: 90%
+}
+
+
+.first .product-presentation .small-images {
+	margin-top: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+
+}
+
+.first .product-presentation .small-images .small {
+	padding: 20px;
+	border: 2px solid #936F39;
+	margin: 0 15px 15px 0;
+	border-radius: 20px;
+	transition: filter 0.5s;
+}
+
+.first .product-presentation .small-images .small:hover {
+	filter: brightness(50%);
+}
+.first .product-presentation .small-images .small img {
+	width: 120px;
+}
+
+.presentation .product-presentation button {
+	margin-top: 20px;
+	padding: 15px 20px;
+	font-size: 15px;
+	border-radius: 10px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.first .product-presentation button {
+	background-color: inherit;
+	border: 2px solid #936F39;
+	color: #936F39;
+	transition: background-color 0.5s, color 0.5s;
+}
+.first .product-presentation button:hover {
+	background-color: #141414;
+	
+}
+
+
+/*DEUXIEME PARTIE*/
+
+.second{
+    background-color: black;
+}
+.second .image-presentation {
+    display: flex;
+    
+}
+.second .product-presentation{
+    margin : 115px 0 0 70px
+}
+
+.second .product-presentation h1{
+    font-size: 63px;
+}
+
+
+/*FOOTER*/
+
+footer{
+    margin: 0 0 0 0;
+	padding: 20px;
+	background-color: black;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+footer h3 {
+	color: #936F39;
+}
+footer p {
+	cursor: pointer;
+	color: #ccc;
+}
+footer p:hover {
+	color: white;
+}
+
+
+/*RESPONSIVE*/
+@media screen and (max-width: 400px) {
+    
+
+	nav .onglets p {
+		display: none;
+	}
+
+	.presentation .product-presentation h1 {
+		font-size: 2em;
+	}
+	.presentation .image-presentation {
+		display: none;
+	}
+	.first .product-presentation .small-images .small img {
+		width: 90px;
+	}
+
+	footer {
+		justify-content: flex-start;
+	}
+	footer .column {
+		width: 80%;
+	}
+}
+
+
+
+
